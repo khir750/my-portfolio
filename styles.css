@@ -1,0 +1,510 @@
+/* ==========================================================================
+   Light Constellation Theme (Borderless Layout with Interactive Motion Canvas)
+   ========================================================================== */
+
+:root {
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Light Theme Colors */
+  --bg-clean: #faf9f6;
+
+  --text-heading: #0f172a;
+  --text-body: #1e293b;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+
+  /* Pokémon Light Accents */
+  --poke-red: #ef4444;
+  --poke-blue: #2563eb;
+  --poke-yellow: #d97706;
+  --poke-green: #10b981;
+  --poke-purple: #7c3aed;
+
+  --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-clean);
+}
+
+body {
+  background-color: var(--bg-clean);
+  color: var(--text-body);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fullscreen Constellation Canvas */
+#constellation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Two-Column Grid Layout (No Heavy Containers) */
+.layout-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   LEFT SIDEBAR (Fixed & Borderless)
+   -------------------------------------------------------------------------- */
+.sidebar {
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 8rem);
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Avatar Circle */
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid var(--poke-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.15);
+  position: relative;
+}
+
+.avatar-initials {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--poke-red);
+  letter-spacing: 1px;
+}
+
+.author-name {
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.5px;
+}
+
+.author-title {
+  font-size: 1rem;
+  color: var(--poke-blue);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--poke-green);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  margin-bottom: 1.25rem;
+  width: fit-content;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--poke-green);
+  box-shadow: 0 0 8px var(--poke-green);
+}
+
+.author-bio {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation Links */
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.nav-item {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all var(--transition);
+}
+
+.nav-line {
+  width: 18px;
+  height: 2px;
+  background: var(--text-dim);
+  transition: all var(--transition);
+}
+
+.nav-item:hover, .nav-item.active {
+  color: var(--poke-red);
+}
+
+.nav-item:hover .nav-line, .nav-item.active .nav-line {
+  width: 36px;
+  background: var(--poke-red);
+}
+
+.resume-link {
+  color: var(--poke-blue);
+  margin-top: 0.25rem;
+}
+
+/* Social & Contact Icons */
+.social-links {
+  display: flex;
+  gap: 1.15rem;
+  margin-top: 0.75rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+.social-links a {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--poke-red);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT SCROLLABLE CONTENT (Container-Free Open Layout)
+   -------------------------------------------------------------------------- */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.content-section {
+  scroll-margin-top: 4rem;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  color: var(--text-heading);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pokeball-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--poke-red);
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.5);
+  display: inline-block;
+}
+
+.prose-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  font-size: 0.95rem;
+  color: var(--text-body);
+}
+
+.prose-block strong {
+  color: var(--text-heading);
+}
+
+/* --------------------------------------------------------------------------
+   JOURNEY TIMELINE
+   -------------------------------------------------------------------------- */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid #cbd5e1;
+  margin-left: 0.4rem;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--poke-blue);
+  position: absolute;
+  left: -1.85rem;
+  top: 0.35rem;
+  box-shadow: 0 0 0 3px var(--bg-clean);
+}
+
+.timeline-year {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--poke-blue);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.35rem;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   PROJECTS
+   -------------------------------------------------------------------------- */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-entry {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.project-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.project-header h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+/* Pokémon Type Pills */
+.type-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.type-pill.electric { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+.type-pill.fire { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+.type-pill.water { background: #dbeafe; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.type-pill.grass { background: #d1fae5; color: #047857; border: 1px solid #6ee7b7; }
+.type-pill.psychic { background: #f3e8ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+
+.project-tech {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.project-tech span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--poke-blue);
+  background: #eff6ff;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   STACK SECTION (2x2 Grid)
+   -------------------------------------------------------------------------- */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stack-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.stack-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stack-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--poke-blue);
+}
+
+.stack-title h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: var(--text-body);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition);
+}
+
+.tag-pill:hover {
+  border-color: var(--poke-red);
+  color: var(--poke-red);
+  transform: translateY(-1px);
+}
+
+/* References Block */
+.references-block {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ref-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.ref-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ref-box strong {
+  color: var(--text-heading);
+  font-size: 0.9rem;
+}
+
+.ref-box small {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Site Footer */
+.site-footer {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .sidebar {
+    position: relative;
+    top: 0;
+    height: auto;
+  }
+
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+}

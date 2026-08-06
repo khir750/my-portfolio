@@ -1,0 +1,10 @@
+# Dependencies & Logs
+node_modules/
+*.log
+
+# Large media files if any
+*.mp4
+
+# OS generated files
+.DS_Store
+Thumbs.db
