@@ -285,10 +285,10 @@ body {
    ========================================================================== */
 .photo-gallery {
   display: flex;
-  gap: 1.25rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
   overflow-x: auto;
-  padding: 0.25rem 0.25rem 0.75rem 0.25rem;
+  padding: 0.35rem 0.35rem 0.85rem 0.35rem;
   scrollbar-width: thin;
 }
 
@@ -302,20 +302,20 @@ body {
 }
 
 .photo-card {
-  flex: 0 0 220px;
-  height: 175px;
+  flex: 0 0 280px;
+  height: 390px;
   background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  padding: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .photo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
 }
 
 .photo-card img {
@@ -383,7 +383,7 @@ body {
     grid-template-columns: 1fr;
   }
   .photo-card {
-    flex: 0 0 170px;
-    height: 140px;
+    flex: 0 0 230px;
+    height: 320px;
   }
 }
