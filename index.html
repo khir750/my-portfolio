@@ -3,320 +3,299 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahmad Khir Rashdan | Data Analyst & Business Analyst | Portfolio & Resume">
-  <title>Ahmad Khir Rashdan — Portfolio</title>
+  <meta name="description" content="Resume & Portfolio - Ahmad Khir Rashdan Bin Mohamad Shamsudin">
+  <title>Ahmad Khir Rashdan | Resume & Portfolio</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Interactive Constellation Canvas Animation -->
-  <canvas id="constellation"></canvas>
-
-  <div class="layout-container">
+  <!-- TOP HEADER BANNER (With UiTM Background Image Code Placeholder) -->
+  <header class="header-banner">
     
-    <!-- Left Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-inner">
-        
-        <!-- Avatar Badge -->
-        <div class="avatar-circle">
-          <span class="avatar-initials">AKR</span>
+    <!-- UiTM Background Image Container (Place uitm-bg.jpg in this folder to enable!) -->
+    <div class="header-bg-overlay"></div>
+
+    <div class="header-content">
+      
+      <!-- Circular Profile Picture Container with Gold Ring -->
+      <div class="profile-avatar-container">
+        <!-- REPLACE 'profile.jpg' WITH YOUR ACTUAL PROFILE PHOTO FILENAME -->
+        <img src="profile.jpg" alt="Ahmad Khir Rashdan" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="profile-avatar-fallback">
+          <span>AKR</span>
         </div>
-
-        <h1 class="author-name">Ahmad Khir Rashdan</h1>
-        <h2 class="author-title">Aspiring Data Analyst & Business Analyst</h2>
-
-        <!-- Status Badge -->
-        <div class="status-badge">
-          <span class="status-dot"></span> Available for Internship (Sept - Dec 2026)
-        </div>
-
-        <p class="author-bio">
-          Semester 6 Business Computing student at UiTM Kuala Terengganu (CGPA: 3.38). Specialized in SQL, Power BI dashboarding, predictive analytics, and web development.
-        </p>
-
-        <!-- Navigation Menu -->
-        <nav class="side-nav">
-          <a href="#about" class="nav-item active"><span class="nav-line"></span> ABOUT</a>
-          <a href="#journey" class="nav-item"><span class="nav-line"></span> JOURNEY</a>
-          <a href="#projects" class="nav-item"><span class="nav-line"></span> PROJECTS</a>
-          <a href="#stack" class="nav-item"><span class="nav-line"></span> STACK</a>
-          <a href="RESUME AHMAD KHIR RASHDAN BIN MOHAMAD SHAMSUDIN.pdf" target="_blank" download class="nav-item resume-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Download résumé
-          </a>
-        </nav>
-
-        <!-- Social Action Links directly below Download resume -->
-        <div class="social-links">
-          <!-- 1. GitHub Logo -->
-          <a href="https://github.com" target="_blank" title="GitHub">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-          </a>
-
-          <!-- 2. LinkedIn Logo -->
-          <a href="https://linkedin.com" target="_blank" title="LinkedIn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-
-          <!-- 3. WhatsApp Logo -->
-          <a href="https://wa.me/60192414943" target="_blank" title="WhatsApp">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          </a>
-
-          <!-- 4. Email Logo -->
-          <a href="mailto:khir750@gmail.com" title="Email">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-          </a>
-        </div>
-
       </div>
-    </aside>
 
-    <!-- Right Content Column -->
-    <main class="main-content">
+      <!-- Candidate Name & Details -->
+      <h1 class="candidate-name">AHMAD KHIR RASHDAN BIN MOHAMAD SHAMSUDIN</h1>
+      <p class="candidate-location">Universiti Teknologi MARA, 32610, Seri Iskandar, Perak</p>
+      
+      <p class="candidate-contact">
+        <a href="tel:+60192414943">+60192414943</a> | 
+        <a href="mailto:khir750@gmail.com">khir750@gmail.com</a> | 
+        <a href="https://linkedin.com" target="_blank" class="gold-link">LinkedIn Profile</a> |
+        <a href="RESUME AHMAD KHIR RASHDAN BIN MOHAMAD SHAMSUDIN.pdf" target="_blank" download class="gold-link">Download PDF Resume</a>
+      </p>
 
-      <!-- ABOUT SECTION -->
-      <section id="about" class="content-section">
-        <h3 class="section-label">
-          <span class="pokeball-bullet"></span> ABOUT
-        </h3>
-        <div class="prose-block">
-          <p>
-            I'm a final-year <strong>Bachelor of Information Systems (Hons.) Business Computing</strong> student at <strong>Universiti Teknologi MARA (UiTM) Kuala Terengganu</strong> (CGPA: 3.38). I specialize in turning complex datasets into strategic business insights and developing practical digital solutions.
-          </p>
-          <p>
-            My core technical competencies include <strong>SQL database management, Power BI business intelligence dashboarding, predictive machine learning (WEKA / RapidMiner)</strong>, and web application development using PHP, Python, and modern web tech.
-          </p>
-          <p>
-            In addition to technical data work, I serve as <strong>Second-in-Command (2IC)</strong> for the <em>Kesatria Commanders Battalion</em> at UiTM, coordinating battalion operations, discipline, and training. In 2024, I achieved 3rd place in the Multi-Campus <em>Extreme Outdoor Quest Mountain Bike Challenge</em>.
-          </p>
-        </div>
+    </div>
+    <!-- Gold Line Accent at Bottom of Header -->
+    <div class="gold-accent-line"></div>
+  </header>
+
+  <!-- HORIZONTAL NAVIGATION BAR -->
+  <nav class="main-navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="#objective" class="nav-item active">OBJECTIVE</a></li>
+        <li><a href="#education" class="nav-item">EDUCATION</a></li>
+        <li><a href="#working" class="nav-item">WORKING</a></li>
+        <li><a href="#leadership" class="nav-item">LEADERSHIP</a></li>
+        <li><a href="#projects" class="nav-item">PROJECTS</a></li>
+        <li><a href="#volunteer" class="nav-item">VOLUNTEER</a></li>
+        <li><a href="#skills" class="nav-item">SKILLS</a></li>
+        <li><a href="#achievements" class="nav-item">ACHIEVEMENTS</a></li>
+        <li><a href="#references" class="nav-item">REFERENCES</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="page-body">
+    <div class="content-wrapper">
+
+      <!-- SECTION 1: OBJECTIVE -->
+      <section id="objective" class="resume-card">
+        <h2 class="card-title">Career Objective</h2>
+        <div class="card-divider"></div>
+        <p class="prose-text">
+          I am a dependable, responsible, and detail-oriented Semester 6 <strong>Bachelor of Information Systems (Hons.) Business Computing</strong> student with a current CGPA of 3.38. Practical academic experience in SQL and database management, data cleaning and preprocessing, predictive analytics, and business intelligence dashboarding using Power BI. Seeking a Data Analyst or Business Analyst internship placement from 14 September 2026 to 18 December 2026. My goal is to apply my analytical thinking, technical skills, and problem-solving abilities to provide high-quality data solutions in a professional organization.
+        </p>
       </section>
 
-      <!-- JOURNEY SECTION -->
-      <section id="journey" class="content-section">
-        <h3 class="section-label">
-          <span class="pokeball-bullet"></span> JOURNEY
-        </h3>
-        <div class="timeline-container">
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2026</span>
-            <h4 class="timeline-title">Pengajian Am E-Learning System & Smart Parking Prototype</h4>
-            <p class="timeline-desc">Developed a web-based e-learning system for STPM students and built a functional Arduino-based smart parking prototype.</p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2026</span>
-            <h4 class="timeline-title">PRIDE Showcase 13.0 & PowerBI BI Challenge</h4>
-            <p class="timeline-desc">Demonstrated computing innovation at UiTM PRIDE Showcase 13.0 and engineered predictive models for university business intelligence dashboarding.</p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2026 — Present</span>
-            <h4 class="timeline-title">Second-in-Command (2IC) — Kesatria Commanders Battalion</h4>
-            <p class="timeline-desc">Appointed 2IC to assist the Commander in coordinating operations, maintaining discipline, and leading battalion training.</p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2025</span>
-            <h4 class="timeline-title">Pantun Remix Malay Game & Customer Churn Mining</h4>
-            <p class="timeline-desc">Created an interactive Malay pantun web learning game (PHP/Laragon) and mined customer churn patterns using WEKA decision trees.</p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2024</span>
-            <h4 class="timeline-title">3rd Place — Extreme Outdoor Quest (Mountain Bike)</h4>
-            <p class="timeline-desc">Achieved third place against multi-campus participants in a demanding endurance and navigation event (KKEC).</p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2023 — Present</span>
-            <h4 class="timeline-title">Started Information Systems at UiTM Kuala Terengganu</h4>
-            <p class="timeline-desc">Business Computing track — Current CGPA 3.38. Focus on SQL, Data Mining, System Analysis & Power BI.</p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION -->
-      <section id="projects" class="content-section">
-        <h3 class="section-label">
-          <span class="pokeball-bullet"></span> PROJECTS
-        </h3>
-        <div class="projects-list">
-          
-          <div class="project-entry">
-            <div class="project-header">
-              <h4>Pengajian Am E-Learning System</h4>
-              <span class="type-pill electric">Electric / Web</span>
-            </div>
-            <p class="project-desc">
-              Web-based e-learning application developed to support Semester 1 STPM Pengajian Am students in revision, quizzes, and academic tracking.
-            </p>
-            <div class="project-tech">
-              <span>PHP</span><span>MySQL</span><span>CSS3</span><span>Web Dev</span>
-            </div>
-          </div>
-
-          <div class="project-entry">
-            <div class="project-header">
-              <h4>Linking Park Smart Parking Prototype</h4>
-              <span class="type-pill fire">Fire / Hardware</span>
-            </div>
-            <p class="project-desc">
-              Arduino-based smart parking prototype that detects incoming vehicles via sensors and dynamically assigns available parking spaces.
-            </p>
-            <div class="project-tech">
-              <span>Arduino</span><span>Sensors</span><span>IoT</span><span>Logic Control</span>
-            </div>
-          </div>
-
-          <div class="project-entry">
-            <div class="project-header">
-              <h4>PowerBI Business Intelligence Dashboard</h4>
-              <span class="type-pill water">Water / Analytics</span>
-            </div>
-            <p class="project-desc">
-              Interactive Business Intelligence dashboard created using Power BI and DAX predictive modeling for university dataset analysis.
-            </p>
-            <div class="project-tech">
-              <span>Power BI</span><span>Predictive Analytics</span><span>DAX</span>
-            </div>
-          </div>
-
-          <div class="project-entry">
-            <div class="project-header">
-              <h4>Pantun Remix — Malay Learning Game</h4>
-              <span class="type-pill grass">Grass / Game</span>
-            </div>
-            <p class="project-desc">
-              Web-based educational game that helps users learn and practice Malay pantun literature using PHP, CSS, and Laragon local server environment.
-            </p>
-            <div class="project-tech">
-              <span>PHP</span><span>CSS3</span><span>Laragon</span><span>Gamification</span>
-            </div>
-          </div>
-
-          <div class="project-entry">
-            <div class="project-header">
-              <h4>Customer Churn Prediction (WEKA)</h4>
-              <span class="type-pill psychic">Psychic / Mining</span>
-            </div>
-            <p class="project-desc">
-              Preprocessed customer data in WEKA and developed decision tree classification models (J48) for data mining predictive analysis.
-            </p>
-            <div class="project-tech">
-              <span>WEKA</span><span>Decision Tree</span><span>Data Preprocessing</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- STACK SECTION -->
-      <section id="stack" class="content-section">
-        <h3 class="section-label">
-          <span class="pokeball-bullet"></span> STACK & COMPETENCIES
-        </h3>
+      <!-- SECTION 2: EDUCATION -->
+      <section id="education" class="resume-card">
+        <h2 class="card-title">Education</h2>
+        <div class="card-divider"></div>
         
-        <div class="stack-grid">
-          
-          <div class="stack-block">
-            <div class="stack-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stack-icon"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              <h4>Languages</h4>
-            </div>
-            <div class="tag-row">
-              <span class="tag-pill">Python</span>
-              <span class="tag-pill">PHP</span>
-              <span class="tag-pill">JavaScript</span>
-              <span class="tag-pill">SQL</span>
-              <span class="tag-pill">HTML5</span>
-            </div>
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Universiti Teknologi MARA (UiTM), Kuala Terengganu</h3>
+            <span class="entry-date">2023 – Present</span>
           </div>
-
-          <div class="stack-block">
-            <div class="stack-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stack-icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              <h4>Web</h4>
-            </div>
-            <div class="tag-row">
-              <span class="tag-pill">HTML</span>
-              <span class="tag-pill">CSS</span>
-              <span class="tag-pill">Tailwind CSS</span>
-              <span class="tag-pill">Bootstrap</span>
-              <span class="tag-pill">Laragon</span>
-            </div>
-          </div>
-
-          <div class="stack-block">
-            <div class="stack-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stack-icon"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M21 19c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14"></path><path d="M21 5v14"></path></svg>
-              <h4>Data</h4>
-            </div>
-            <div class="tag-row">
-              <span class="tag-pill">Power BI</span>
-              <span class="tag-pill">MySQL</span>
-              <span class="tag-pill">WEKA</span>
-              <span class="tag-pill">RapidMiner</span>
-              <span class="tag-pill">MS Access</span>
-            </div>
-          </div>
-
-          <div class="stack-block">
-            <div class="stack-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stack-icon"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-              <h4>Tools</h4>
-            </div>
-            <div class="tag-row">
-              <span class="tag-pill">GitHub</span>
-              <span class="tag-pill">VS Code</span>
-              <span class="tag-pill">Project Mgmt</span>
-              <span class="tag-pill">Prompt Engineering</span>
-            </div>
-          </div>
-
+          <p class="entry-subtitle">Bachelor of Information Systems (Hons.) Business Computing</p>
+          <p class="entry-detail"><strong>CGPA:</strong> 3.38 | Current Semester: 6</p>
+          <p class="entry-detail"><strong>Relevant Areas:</strong> Data Analytics, Data Mining, Machine Learning, Database Engineering, Data Visualisation, Statistical Analysis, and System Analysis and Design.</p>
         </div>
 
-        <!-- Academic References -->
-        <div class="references-block">
-          <h4 class="ref-title">Academic References</h4>
-          <div class="ref-grid">
-            <div class="ref-box">
-              <strong>Muhammad Atif bin Ramlan</strong>
-              <small>Academic Advisor | UiTM Kuala Terengganu</small>
-              <small>📧 atif@uitm.edu.my | 📞 013-9097166</small>
-            </div>
-            <div class="ref-box">
-              <strong>Nik Marsyahariani Nik Daud</strong>
-              <small>Project Supervisor | UiTM Kuala Terengganu</small>
-              <small>📧 nikma944@uitm.edu.my | 📞 013-9229594</small>
-            </div>
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>SMKA Sultan Azlan Shah, Seri Iskandar, Perak</h3>
+            <span class="entry-date">STPM</span>
           </div>
+          <p class="entry-subtitle">Sijil Tinggi Persekolahan Malaysia (STPM)</p>
+          <p class="entry-detail"><strong>CGPA:</strong> 3.59 | <strong>MUET:</strong> Band 4</p>
+          <p class="entry-detail"><strong>Subjects:</strong> Pengajian Am, Usuluddin, Arabic Language, and Syariah.</p>
         </div>
-
       </section>
 
-      <!-- Footer -->
-      <footer class="site-footer">
-        <p>© 2026 Ahmad Khir Rashdan Bin Mohamad Shamsudin. All rights reserved.</p>
-      </footer>
+      <!-- SECTION 3: WORKING -->
+      <section id="working" class="resume-card">
+        <h2 class="card-title">Work Experience</h2>
+        <div class="card-divider"></div>
 
-    </main>
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Stall Operator</h3>
+            <span class="entry-date">2024 – 2025</span>
+          </div>
+          <p class="entry-subtitle">Local Food Stall — Part-time</p>
+          <ul class="entry-bullets">
+            <li>Managed daily food preparation, customer orders, and high-volume sales operations while maintaining product quality and cleanliness.</li>
+            <li>Monitored ingredients and stock levels carefully to minimise wastage and support smooth daily operations.</li>
+          </ul>
+        </div>
 
-  </div>
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Grocery Replenishment Assistant</h3>
+            <span class="entry-date">May 2023 – Aug 2023</span>
+          </div>
+          <p class="entry-subtitle">Lotus's — Part-time</p>
+          <ul class="entry-bullets">
+            <li>Restocked dry-grocery products such as rice and sugar, arranged shelves, checked product availability, and maintained an organized sales area.</li>
+          </ul>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Independent Delivery Partner</h3>
+            <span class="entry-date">2021 – 2023</span>
+          </div>
+          <p class="entry-subtitle">foodpanda (Delivery Hero Malaysia) — Part-time</p>
+          <ul class="entry-bullets">
+            <li>Completed customer deliveries safely and efficiently, planned suitable routes, and communicated professionally with customers.</li>
+          </ul>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Independent Amway Business Owner (ABO)</h3>
+            <span class="entry-date">2022 – 2024</span>
+          </div>
+          <p class="entry-subtitle">Amway Malaysia — Part-time</p>
+          <ul class="entry-bullets">
+            <li>Handled product promotion, customer communication, order coordination, and basic sales record keeping.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 4: LEADERSHIP -->
+      <section id="leadership" class="resume-card">
+        <h2 class="card-title">Leadership & Participations</h2>
+        <div class="card-divider"></div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Kesatria Commanders Battalion, UiTM</h3>
+            <span class="entry-date">2024 – Present</span>
+          </div>
+          <p class="entry-subtitle">Leadership Progression</p>
+          <ul class="entry-bullets">
+            <li><strong>Second-in-Command (2IC) [2026 – Present]:</strong> Supports the Commander in coordinating operations, maintaining discipline, and leading battalion members.</li>
+            <li><strong>Pegawai Latih / Trainee Officer [2024 – 2025]:</strong> Completed structured foundational training in leadership, teamwork, discipline, and operational planning.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 5: PROJECTS -->
+      <section id="projects" class="resume-card">
+        <h2 class="card-title">Projects</h2>
+        <div class="card-divider"></div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Pengajian Am E-Learning System</h3>
+            <span class="entry-date">Final Year Project 2026</span>
+          </div>
+          <p class="entry-detail">Developed a web-based e-learning system to support Semester 1 STPM Pengajian Am students in learning, revision, and progress tracking.</p>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Linking Park Smart Parking Prototype</h3>
+            <span class="entry-date">2026</span>
+          </div>
+          <p class="entry-detail">Built a functional Arduino-based prototype that detects incoming vehicles and assigns available parking spaces automatically.</p>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>PowerBI Dashboard Challenge</h3>
+            <span class="entry-date">2026</span>
+          </div>
+          <p class="entry-detail">Developed an interactive Business Intelligence dashboard using Power BI and created predictive models for university data decision-making.</p>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Pantun Remix — Malay Pantun Learning Game</h3>
+            <span class="entry-date">2025</span>
+          </div>
+          <p class="entry-detail">Created a web-based learning game that helps users learn and practise Malay pantun using PHP, CSS, and Laragon.</p>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Customer Churn Prediction Using Decision Tree Classification</h3>
+            <span class="entry-date">2025</span>
+          </div>
+          <p class="entry-detail">Prepared and analysed customer data in WEKA and developed decision tree-based classification models for a Data Mining course project.</p>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Gym Membership Management System</h3>
+            <span class="entry-date">2024</span>
+          </div>
+          <p class="entry-detail">Developed a basic system to organise gym member information and membership records.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 6: VOLUNTEER -->
+      <section id="volunteer" class="resume-card">
+        <h2 class="card-title">Volunteer Work</h2>
+        <div class="card-divider"></div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <h3>Flood Relief Volunteer</h3>
+            <span class="entry-date">MERCY Malaysia</span>
+          </div>
+          <p class="entry-detail">Supported flood-relief activities by organising supplies, assisting with distribution, and helping affected communities under team supervision.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 7: SKILLS -->
+      <section id="skills" class="resume-card">
+        <h2 class="card-title">Skills & Competencies</h2>
+        <div class="card-divider"></div>
+
+        <div class="skills-columns">
+          <div class="skills-block">
+            <h4>Technical & Analytical Skills</h4>
+            <p>SQL, Project Management, Data Cleaning and Preprocessing, Data Visualisation, Basic Statistical Analysis, Database Management, Problem-Solving, Critical Thinking.</p>
+          </div>
+          <div class="skills-block">
+            <h4>Tools & Platforms</h4>
+            <p>Microsoft Power BI, WEKA, RapidMiner, Microsoft Access, MySQL.</p>
+          </div>
+          <div class="skills-block">
+            <h4>Programming & Web Development</h4>
+            <p>Python, PHP, HTML, SQL.</p>
+          </div>
+          <div class="skills-block">
+            <h4>Languages</h4>
+            <p>Malay (Native proficiency), English (Fluent spoken and written communication).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: ACHIEVEMENTS -->
+      <section id="achievements" class="resume-card">
+        <h2 class="card-title">Achievements</h2>
+        <div class="card-divider"></div>
+
+        <ul class="entry-bullets">
+          <li><strong>3rd Place — Extreme Outdoor Quest (Mountain Bike) 2024:</strong> Komander Kesatria Endurance Challenge (KKEC). Achieved 3rd place against participants from multiple UiTM campuses in a demanding endurance and navigation event.</li>
+          <li><strong>PRIDE Showcase 13.0 (2026):</strong> Universiti Teknologi MARA. Participated in a university innovation showcase focused on computing, project demonstration, and presentation skills.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 9: REFERENCES -->
+      <section id="references" class="resume-card">
+        <h2 class="card-title">Academic References</h2>
+        <div class="card-divider"></div>
+
+        <div class="references-grid">
+          <div class="ref-item">
+            <h4>Muhammad Atif bin Ramlan</h4>
+            <p>Academic Advisor | UiTM Kuala Terengganu</p>
+            <p>📞 013-9097166 | 📧 atif@uitm.edu.my</p>
+          </div>
+          <div class="ref-item">
+            <h4>Nik Marsyahariani Nik Daud</h4>
+            <p>Project Supervisor | UiTM Kuala Terengganu</p>
+            <p>📞 013-9229594 | 📧 nikma944@uitm.edu.my</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
