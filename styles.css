@@ -326,6 +326,112 @@ body {
   display: block;
 }
 
+/* ==========================================================================
+   PROJECTS 2-COLUMN GRID SYSTEM (Matching Reference Image 1-to-1)
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card-item {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+}
+
+.project-preview-frame {
+  width: 100%;
+  height: 145px;
+  border-radius: 8px;
+  border: 1px dashed #cbd5e1;
+  overflow: hidden;
+  background: #f8fafc;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-preview-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2e0057; /* UiTM Purple */
+  margin-bottom: 0.2rem;
+  line-height: 1.35;
+}
+
+.project-year {
+  font-size: 0.85rem;
+  color: #c5a059; /* UiTM Gold */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  border: 1px solid #dbeafe;
+}
+
+.project-bullets {
+  font-size: 0.88rem;
+  color: #334155;
+  margin-left: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-bullets li {
+  margin-bottom: 0.35rem;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 0.45rem 1.15rem;
+  background: #003e74;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.2s ease;
+}
+
+.project-btn:hover {
+  background: #2e0057;
+}
+
 /* Skills Grid */
 .skills-columns {
   display: grid;
@@ -380,6 +486,9 @@ body {
     padding: 1.5rem;
   }
   .skills-columns {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
     grid-template-columns: 1fr;
   }
   .photo-card {
