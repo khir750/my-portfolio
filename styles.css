@@ -231,7 +231,7 @@ body {
 
 /* Entry Items (Education, Work, Projects, etc.) */
 .entry-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .entry-item:last-child {
@@ -278,6 +278,52 @@ body {
 
 .entry-bullets li {
   margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   PHOTO GALLERY & CARDS (Matching Screenshot 1-to-1)
+   ========================================================================== */
+.photo-gallery {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding: 0.25rem 0.25rem 0.75rem 0.25rem;
+  scrollbar-width: thin;
+}
+
+.photo-gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.photo-card {
+  flex: 0 0 220px;
+  height: 175px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
 }
 
 /* Skills Grid */
@@ -335,5 +381,9 @@ body {
   }
   .skills-columns {
     grid-template-columns: 1fr;
+  }
+  .photo-card {
+    flex: 0 0 170px;
+    height: 140px;
   }
 }
